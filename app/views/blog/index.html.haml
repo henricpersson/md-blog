@@ -1,0 +1,7 @@
+%ul.blog-entries
+  - @blog_entries.each do |blog_entry|
+    %li.blog-entry
+      .container
+        .published-at= blog_entry.published_at
+        .title= blog_entry.title
+        .body= blog_entry.body

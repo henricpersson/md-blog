@@ -1,25 +1,26 @@
-%h1 Listing blog_entries
+.container
+  %h1 Listing blog_entries
 
-%table
-  %tr
-    %th Title
-    %th Body
-    %th Url slug
-    %th Published at
-    %th
-    %th
-    %th
-
-  - @blog_entries.each do |blog_entry|
+  %table
     %tr
-      %td= blog_entry.title
-      %td= blog_entry.body
-      %td= blog_entry.url_slug
-      %td= blog_entry.published_at
-      %td= link_to 'Show', blog_entry
-      %td= link_to 'Edit', edit_blog_entry_path(blog_entry)
-      %td= link_to 'Destroy', blog_entry, method: :delete, data: { confirm: 'Are you sure?' }
+      %th Title
+      %th Body
+      %th Url slug
+      %th Published at
+      %th
+      %th
+      %th
 
-%br
+    - @blog_entries.each do |blog_entry|
+      %tr
+        %td= blog_entry.title
+        %td= blog_entry.body
+        %td= blog_entry.url_slug
+        %td= blog_entry.published_at
+        %td= link_to 'Show', blog_entry
+        %td= link_to 'Edit', edit_blog_entry_path(blog_entry)
+        %td= link_to 'Destroy', blog_entry, method: :delete, data: { confirm: 'Are you sure?' }
 
-= link_to 'New Blog entry', new_blog_entry_path
+  %br
+
+  = link_to 'New Blog entry', new_blog_entry_path

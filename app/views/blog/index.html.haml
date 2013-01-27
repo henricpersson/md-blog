@@ -2,6 +2,15 @@
   - @blog_entries.each do |blog_entry|
     %li.blog-entry
       .container
-        .published-at= blog_entry.published_at
-        .title= blog_entry.title
-        .body= blog_entry.body
+        .published-at-oneline
+          = blog_entry.published_at.strftime '%d %b %Y at %I:%M%p'
+        .published-at
+          .day
+            = blog_entry.published_at.strftime '%d'
+          .month
+            = blog_entry.published_at.strftime '%b'
+          .year
+            = blog_entry.published_at.strftime '%Y'
+        .entry
+          %h2.title= blog_entry.title
+          .body= blog_entry.body

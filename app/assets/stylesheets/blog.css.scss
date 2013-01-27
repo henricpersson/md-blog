@@ -1,8 +1,23 @@
 @import 'compass/css3';
 
+.clearfix {
+  display: block;
+
+  &:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+  }
+}
+
+
 body {
   padding-left: 0 !important;
   padding-right: 0 !important;
+  color: #333;
 }
 
 .visible-desktop li.blog-entry {
@@ -28,6 +43,57 @@ ul.blog-entries {
     &:nth-child(3n+3) {
       @include background-image(linear-gradient(lighten(green, 70%),
       lighten(green, 60%)));
+    }
+
+    .entry {
+      float: left;
+      width: percentage(3 / 5);
+
+      .title {
+      }
+    }
+
+    .published-at-oneline {
+      display: block;
+    }
+
+    .published-at {
+      display: none;
+    }
+
+    @media only screen and (min-width: 600px) {
+      .published-at-oneline {
+        display: none;
+      }
+
+      .published-at {
+        display: block;
+        float: left;
+        width: percentage(1 / 5);
+        opacity: 0.6;
+        text-align: center;
+
+        .day {
+          font-size: 80px;
+          line-height: 80px;
+          font-weight: bold;
+          letter-spacing: -9px;
+        }
+
+        .month {
+          font-size: 30px;
+          line-height: 30px;
+          text-transform: uppercase;
+          letter-spacing: 6px;
+        }
+
+        .year {
+          font-size: 28px;
+          line-height: 28px;
+          font-weight: bold;
+          opacity: 0.5;
+        }
+      }
     }
   }
 }

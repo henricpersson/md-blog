@@ -1,4 +1,4 @@
-.blog-entry.container
+.blog-entry.clearfix{ data: { container_for: blog_path(blog_entry) } }
   .published-at-oneline
     = blog_entry.published_at.strftime '%d %b %Y at %I:%M%p'
   .published-at
@@ -16,13 +16,3 @@
         = link_to 'See more', blog_path(blog_entry), class: 'see-more ajax'
     - else
       .body= markdown_to_html(blog_entry.body).html_safe
-  - unless truncated
-    .resources
-      .resource
-        %img{ src: 'http://placekitten.com/200/200' }
-        .caption
-          This is a cat
-      .resource
-        %img{ src: 'http://placekitten.com/200/150' }
-        .caption
-          This is another cat

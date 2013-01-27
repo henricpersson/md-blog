@@ -49,23 +49,20 @@ ul.blog-entries {
 
 
 .blog-entry {
-  margin: 0;
-  padding: 3em 1em;
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 700px;
+  padding: 3% 2%;
 
   .entry {
     @include box-sizing(border-box);
     padding: 0 1.5em;
     float: left;
-    width: percentage(3 / 5);
+    width: 80%;
+    max-width: 600px;
 
     .title {
     }
-  }
-
-  .resources {
-    float: left;
-    width: percentage(1 / 5);
-    padding-top: 20px;
   }
 
   .published-at-oneline {
@@ -84,7 +81,7 @@ ul.blog-entries {
     .published-at {
       display: block;
       float: left;
-      width: percentage(1 / 5);
+      width: 100px;
       opacity: 0.6;
       text-align: center;
 

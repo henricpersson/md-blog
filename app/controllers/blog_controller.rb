@@ -6,7 +6,8 @@ class BlogController < ApplicationController
 
   def show
     blog_entry = BlogEntry.find(params[:id])
-    render 'blog/_entry', layout: true, locals: {
+
+    render 'blog/_entry', layout: !request.xhr?, locals: {
       blog_entry: blog_entry,
       truncated: false
     }

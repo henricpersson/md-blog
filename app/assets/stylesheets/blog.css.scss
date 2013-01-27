@@ -32,16 +32,16 @@ ul.blog-entries {
   li.blog-entry {
     margin: 0;
     padding: 3em 1em;
-    @include background-image(linear-gradient(lighten(red, 40%), lighten(red,
+    @include background-image(linear-gradient(lighten(red, 35%), lighten(red,
     30%)));
 
     &:nth-child(3n+2) {
-      @include background-image(linear-gradient(lighten(blue, 40%), lighten(blue,
+      @include background-image(linear-gradient(lighten(blue, 35%), lighten(blue,
       30%)));
     }
 
     &:nth-child(3n+3) {
-      @include background-image(linear-gradient(lighten(green, 70%),
+      @include background-image(linear-gradient(lighten(green, 65%),
       lighten(green, 60%)));
     }
 

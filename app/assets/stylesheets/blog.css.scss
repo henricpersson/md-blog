@@ -1,3 +1,5 @@
+@import 'compass/css3';
+
 body {
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -15,18 +17,17 @@ ul.blog-entries {
   li.blog-entry {
     margin: 0;
     padding: 3em 1em;
-    background-color: #f0f0f0;
-
-    &:nth-child(3n+1) {
-      background-color: red;
-    }
+    @include background-image(linear-gradient(lighten(red, 40%), lighten(red,
+    30%)));
 
     &:nth-child(3n+2) {
-      background-color: blue;
+      @include background-image(linear-gradient(lighten(blue, 40%), lighten(blue,
+      30%)));
     }
 
     &:nth-child(3n+3) {
-      background-color: orange;
+      @include background-image(linear-gradient(lighten(green, 70%),
+      lighten(green, 60%)));
     }
   }
 }

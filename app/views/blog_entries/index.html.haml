@@ -5,7 +5,6 @@
     %th Title
     %th Body
     %th Url slug
-    %th Timestamps
     %th Published at
     %th
     %th
@@ -16,7 +15,6 @@
       %td= blog_entry.title
       %td= blog_entry.body
       %td= blog_entry.url_slug
-      %td= blog_entry.timestamps
       %td= blog_entry.published_at
       %td= link_to 'Show', blog_entry
       %td= link_to 'Edit', edit_blog_entry_path(blog_entry)

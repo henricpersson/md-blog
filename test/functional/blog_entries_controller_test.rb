@@ -18,7 +18,7 @@ class BlogEntriesControllerTest < ActionController::TestCase
 
   test "should create blog_entry" do
     assert_difference('BlogEntry.count') do
-      post :create, blog_entry: { body: @blog_entry.body, published_at: @blog_entry.published_at, timestamps: @blog_entry.timestamps, title: @blog_entry.title, url_slug: @blog_entry.url_slug }
+      post :create, blog_entry: { body: @blog_entry.body, published_at: @blog_entry.published_at, title: @blog_entry.title, url_slug: @blog_entry.url_slug }
     end
 
     assert_redirected_to blog_entry_path(assigns(:blog_entry))
@@ -35,7 +35,7 @@ class BlogEntriesControllerTest < ActionController::TestCase
   end
 
   test "should update blog_entry" do
-    put :update, id: @blog_entry, blog_entry: { body: @blog_entry.body, published_at: @blog_entry.published_at, timestamps: @blog_entry.timestamps, title: @blog_entry.title, url_slug: @blog_entry.url_slug }
+    put :update, id: @blog_entry, blog_entry: { body: @blog_entry.body, published_at: @blog_entry.published_at, title: @blog_entry.title, url_slug: @blog_entry.url_slug }
     assert_redirected_to blog_entry_path(assigns(:blog_entry))
   end
 

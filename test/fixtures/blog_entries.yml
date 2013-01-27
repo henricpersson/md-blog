@@ -4,12 +4,10 @@ one:
   title: MyString
   body: MyString
   url_slug: MyString
-  timestamps: MyString
   published_at: 2013-01-26 18:35:01
 
 two:
   title: MyString
   body: MyString
   url_slug: MyString
-  timestamps: MyString
   published_at: 2013-01-26 18:35:01

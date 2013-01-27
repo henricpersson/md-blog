@@ -29,9 +29,9 @@ ul.blog-entries {
   list-style: none;
   margin: 0;
 
-  li.blog-entry {
-    margin: 0;
-    padding: 3em 1em;
+  li.blog-entry-in-list {
+    width: 100%;
+
     @include background-image(linear-gradient(lighten(red, 35%), lighten(red,
     30%)));
 
@@ -44,63 +44,69 @@ ul.blog-entries {
       @include background-image(linear-gradient(lighten(green, 65%),
       lighten(green, 60%)));
     }
+  }
+}
 
-    .entry {
-      @include box-sizing(border-box);
-      padding: 0 1.5em;
-      float: left;
-      width: percentage(3 / 5);
 
-      .title {
-      }
+.blog-entry {
+  margin: 0;
+  padding: 3em 1em;
+
+  .entry {
+    @include box-sizing(border-box);
+    padding: 0 1.5em;
+    float: left;
+    width: percentage(3 / 5);
+
+    .title {
     }
+  }
 
-    .resources {
-      float: left;
-      width: percentage(1 / 5);
-      padding-top: 20px;
-    }
+  .resources {
+    float: left;
+    width: percentage(1 / 5);
+    padding-top: 20px;
+  }
 
+  .published-at-oneline {
+    display: block;
+  }
+
+  .published-at {
+    display: none;
+  }
+
+  @media only screen and (min-width: 600px) {
     .published-at-oneline {
-      display: block;
-    }
-
-    .published-at {
       display: none;
     }
 
-    @media only screen and (min-width: 600px) {
-      .published-at-oneline {
-        display: none;
+    .published-at {
+      display: block;
+      float: left;
+      width: percentage(1 / 5);
+      opacity: 0.6;
+      text-align: center;
+
+      .day {
+        font-size: 80px;
+        line-height: 80px;
+        font-weight: bold;
+        letter-spacing: -2px;
       }
 
-      .published-at {
-        display: block;
-        float: left;
-        width: percentage(1 / 5);
-        opacity: 0.6;
-        text-align: center;
+      .month {
+        font-size: 30px;
+        line-height: 30px;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+      }
 
-        .day {
-          font-size: 80px;
-          line-height: 80px;
-          font-weight: bold;
-          letter-spacing: -2px;
-        }
-
-        .month {
-          font-size: 30px;
-          line-height: 30px;
-          text-transform: uppercase;
-          letter-spacing: 6px;
-        }
-
-        .year {
-          font-size: 28px;
-          line-height: 28px;
-          font-weight: bold;
-          opacity: 0.5;
-        }
+      .year {
+        font-size: 28px;
+        line-height: 28px;
+        font-weight: bold;
+        opacity: 0.5;
       }
     }
   }

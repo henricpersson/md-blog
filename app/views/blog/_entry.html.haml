@@ -1,0 +1,28 @@
+.blog-entry.container
+  .published-at-oneline
+    = blog_entry.published_at.strftime '%d %b %Y at %I:%M%p'
+  .published-at
+    .day
+      = blog_entry.published_at.strftime '%d'
+    .month
+      = blog_entry.published_at.strftime '%b'
+    .year
+      = blog_entry.published_at.strftime '%Y'
+  .entry
+    %h2.title= blog_entry.title
+    - if truncated
+      .body.excerpt
+        = markdown_to_html(truncate(blog_entry.body, length: 200, separator: ' ')).html_safe
+        = link_to 'See more', blog_path(blog_entry), class: 'see-more ajax'
+    - else
+      .body= markdown_to_html(blog_entry.body).html_safe
+  - unless truncated
+    .resources
+      .resource
+        %img{ src: 'http://placekitten.com/200/200' }
+        .caption
+          This is a cat
+      .resource
+        %img{ src: 'http://placekitten.com/200/150' }
+        .caption
+          This is another cat

@@ -4,4 +4,11 @@ class BlogController < ApplicationController
     @blog_entries = BlogEntry.limit(10)
   end
 
+  def show
+    blog_entry = BlogEntry.find(params[:id])
+    render 'blog/_entry', layout: true, locals: {
+      blog_entry: blog_entry,
+      truncated: false
+    }
+  end
 end

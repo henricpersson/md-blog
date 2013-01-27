@@ -1,22 +1,27 @@
-= form_for @blog_entry do |f|
-  - if @blog_entry.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@blog_entry.errors.count, "error")} prohibited this blog_entry from being saved:"
-      %ul
-        - @blog_entry.errors.full_messages.each do |msg|
-          %li= msg
+.form-horizontal
+  = form_for @blog_entry do |f|
+    - if @blog_entry.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@blog_entry.errors.count, "error")} prohibited this blog_entry from being saved:"
+        %ul
+          - @blog_entry.errors.full_messages.each do |msg|
+            %li= msg
 
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :body
-    = f.text_field :body
-  .field
-    = f.label :url_slug
-    = f.text_field :url_slug
-  .field
-    = f.label :published_at
-    = f.datetime_select :published_at
-  .actions
-    = f.submit 'Save'
+    .control-group
+      = f.label :title, class: 'control-label'
+      .controls
+        = f.text_field :title
+    .control-group
+      = f.label :body, class: 'control-label'
+      .controls
+        = f.text_area :body, cols: 20, class: 'large'
+    .control-group
+      = f.label :url_slug, class: 'control-label'
+      .controls
+        = f.text_field :url_slug
+    .control-group
+      = f.label :published_at, class: 'control-label'
+      .controls.date
+        = f.datetime_select :published_at
+    .form-actions
+      = f.submit 'Save'

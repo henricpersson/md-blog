@@ -1,15 +1,16 @@
 .container
   %h1 Listing blog_entries
 
-  %table
-    %tr
-      %th Title
-      %th Body
-      %th Url slug
-      %th Published at
-      %th
-      %th
-      %th
+  %table.table
+    %thead
+      %tr
+        %th Title
+        %th Body
+        %th Url slug
+        %th Published at
+        %th
+        %th
+        %th
 
     - @blog_entries.each do |blog_entry|
       %tr
@@ -17,9 +18,10 @@
         %td= blog_entry.body
         %td= blog_entry.url_slug
         %td= blog_entry.published_at
-        %td= link_to 'Show', blog_entry
-        %td= link_to 'Edit', edit_blog_entry_path(blog_entry)
-        %td= link_to 'Destroy', blog_entry, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to 'Show', blog_entry, class: 'btn btn-small'
+        %td= link_to 'Edit', edit_blog_entry_path(blog_entry), class: 'btn btn-small'
+        %td= link_to 'Destroy', blog_entry, method: :delete, class: 'btn btn-small btn-danger',
+          data: { confirm: 'Are you sure?' }
 
   %br
 

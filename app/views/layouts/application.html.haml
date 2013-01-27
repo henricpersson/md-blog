@@ -9,11 +9,11 @@
     .navbar.navbar-inverse.navbar-static-top
       .navbar-inner
         .container
-          %a.brand Markdown blog
+          = link_to 'Markdown', blog_entries_path, class: 'brand'
           %ul.nav
             %li
-              %a Blog
+              = link_to 'Blog', blog_entries_path
             %li
-              %a About
+              = link_to 'Admin', blog_entries_path
     .container
       = yield

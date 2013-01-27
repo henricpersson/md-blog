@@ -12,7 +12,7 @@
     %h2.title= blog_entry.title
     - if truncated
       .body.excerpt
-        = markdown_to_html(truncate(blog_entry.body, length: 200, separator: ' ')).html_safe
+        = raw markdown_to_html(truncate(blog_entry.body, length: 200, separator: ' '))
         = link_to 'See more', blog_path(blog_entry), class: 'see-more ajax'
     - else
       .body= markdown_to_html(blog_entry.body).html_safe

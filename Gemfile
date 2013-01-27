@@ -19,6 +19,8 @@ group :assets do
   gem 'compass-rails'
   gem 'twitter-bootstrap-rails'
 
+  gem 'albino'
+
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 

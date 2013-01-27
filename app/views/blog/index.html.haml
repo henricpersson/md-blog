@@ -13,4 +13,4 @@
             = blog_entry.published_at.strftime '%Y'
         .entry
           %h2.title= blog_entry.title
-          .body= blog_entry.body
+          .body= markdown_to_html(blog_entry.body).html_safe

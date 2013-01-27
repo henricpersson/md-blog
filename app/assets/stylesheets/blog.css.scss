@@ -46,11 +46,19 @@ ul.blog-entries {
     }
 
     .entry {
+      @include box-sizing(border-box);
+      padding: 0 1.5em;
       float: left;
       width: percentage(3 / 5);
 
       .title {
       }
+    }
+
+    .resources {
+      float: left;
+      width: percentage(1 / 5);
+      padding-top: 20px;
     }
 
     .published-at-oneline {

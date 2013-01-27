@@ -14,3 +14,12 @@
         .entry
           %h2.title= blog_entry.title
           .body= markdown_to_html(blog_entry.body).html_safe
+        .resources
+          .resource
+            %img{ src: 'http://placekitten.com/200/200' }
+            .caption
+              This is a cat
+          .resource
+            %img{ src: 'http://placekitten.com/200/150' }
+            .caption
+              This is another cat

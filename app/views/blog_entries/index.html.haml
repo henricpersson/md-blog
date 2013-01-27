@@ -15,7 +15,7 @@
     - @blog_entries.each do |blog_entry|
       %tr
         %td= blog_entry.title
-        %td= blog_entry.body
+        %td= truncate(blog_entry.body, length: 100)
         %td= blog_entry.url_slug
         %td= blog_entry.published_at
         %td= link_to 'Show', blog_entry, class: 'btn btn-small'

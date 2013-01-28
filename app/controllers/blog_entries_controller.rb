@@ -1,4 +1,7 @@
 class BlogEntriesController < ApplicationController
+
+  before_filter :require_admin
+
   # GET /blog_entries
   # GET /blog_entries.json
   def index
@@ -78,6 +81,12 @@ class BlogEntriesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to blog_entries_url }
       format.json { head :no_content }
+    end
+  end
+
+  def require_admin
+    unless session[:admin]
+      render nothing: true, status: :unauthorized
     end
   end
 end

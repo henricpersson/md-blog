@@ -19,4 +19,7 @@
           This memo board is open source and made in Cole Valley.
         %li.admin
     = yield
-    = link_to 'Admin', blog_entries_path
+    = link_to 'Log in', '/auth/google_oauth2'
+    - if session[:admin]
+      = link_to 'Log out', '/session/logout'
+      = link_to 'Admin', blog_entries_path

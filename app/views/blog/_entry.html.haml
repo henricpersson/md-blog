@@ -16,3 +16,14 @@
         = link_to 'See more', blog_path(blog_entry), class: 'see-more ajax'
     - else
       .body= markdown_to_html(blog_entry.body).html_safe
+      %hr
+      #disqus_thread
+      :javascript
+        var disqus_shortname = 'codevalleycode';
+        var disqus_identifier = 'entry-#{blog_entry.id}';
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();

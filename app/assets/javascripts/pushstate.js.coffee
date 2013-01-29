@@ -1,7 +1,10 @@
 $ ->
 
+  # disable for now
+  return
+
   unless history.pushState
-    return;
+    return
 
   getContainer = (href) ->
     return $("[data-container_for=\"#{href}\"]")

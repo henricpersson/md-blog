@@ -8,12 +8,18 @@
       = blog_entry.published_at.strftime '%b'
     .year
       = blog_entry.published_at.strftime '%Y'
+    .comments
+      = link_to 'Comments', "#{blog_path(blog_entry)}#disqus_thread",
+        data: { disqus_identifier: "entry-#{blog_entry.id}" }
+
   .entry
-    %h2.title= blog_entry.title
+    %h2.title
+      = link_to blog_entry.title, blog_path(blog_entry)
     - if truncated
       .body.excerpt
         = raw markdown_to_html(truncate(blog_entry.body, length: 200, separator: ' '))
-        = link_to 'See more', blog_path(blog_entry), class: 'see-more ajax'
+        = link_to blog_path(blog_entry), class: 'see-more ajax' do
+          Read full post
     - else
       .body= markdown_to_html(blog_entry.body).html_safe
       %hr

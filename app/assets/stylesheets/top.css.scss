@@ -1,4 +1,5 @@
 @import 'http://fonts.googleapis.com/css?family=Bowlby+One';
+
 .top {
   border-bottom: 1px solid #ccc;
 
@@ -17,12 +18,20 @@
         margin: 0 auto;
         width: 0;
         border: 37px solid red;
-        border-color: red blue green yellow;
+        border-color: #FFB6C1 #8EE5EE #98FB98 yellow;
+      }
+
+      @media only screen and (max-width: 670px) {
+        display: none;
       }
     }
 
     .middle {
       float: left;
+
+      @media only screen and (max-width: 670px) {
+        margin: 0 1.5em;
+      }
 
       h1 {
         font-size: 47px;
@@ -39,6 +48,40 @@
       .tagline {
         font-size: 20px;
         color: #888;
+      }
+
+
+      @media only screen and (max-width: 670px) {
+        h1 {
+          font-size: 40px;
+          line-height: 40px;
+        }
+
+        .tagline {
+          font-size: 15px;
+        }
+      }
+
+      @media only screen and (max-width: 490px) {
+        h1 {
+          font-size: 30px;
+          line-height: 30px;
+        }
+
+        .tagline {
+          font-size: 13px;
+        }
+      }
+
+      @media only screen and (max-width: 320px) {
+        h1 {
+          font-size: 24px;
+          line-height: 24px;
+        }
+
+        .tagline {
+          font-size: 15px;
+        }
       }
     }
   }

@@ -1,3 +1,4 @@
+@import 'http://fonts.googleapis.com/css?family=Bowlby+One';
 .top {
   border-bottom: 1px solid #ccc;
 
@@ -8,15 +9,36 @@
 
     .left {
       float: left;
-      padding: 10px 10px 0 0;
+      margin: 15px 0;
+      width: 120px;
+
+      .logo {
+        display: block;
+        margin: 0 auto;
+        width: 0;
+        border: 37px solid red;
+        border-color: red blue green yellow;
+      }
     }
 
     .middle {
       float: left;
 
       h1 {
-        font-size: 45px;
-        line-height: 50px;
+        font-size: 47px;
+        line-height: 47px;
+        text-transform: uppercase;
+        margin: 19px 0 3px;
+        font-family: Bowlby One;
+
+        a {
+          text-decoration: none;
+        }
+      }
+
+      .tagline {
+        font-size: 20px;
+        color: #888;
       }
     }
   }

@@ -7,17 +7,16 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
-    .top.clearfix
-      %ul.navi
-        %li.logo
-          = link_to root_path, class: 'brand' do
-            = image_tag 'logo.png', width: 50, height: 50
-        %li.header
-          = link_to 'Cole Valley Code', root_path
-        %li.tagline
-          Clearing my mind from programming thoughts.
-          This memo board is open source and made in Cole Valley.
-        %li.admin
+    .top
+      .inner.clearfix
+        .left
+          = link_to root_path, class: 'logo' do
+            = image_tag 'logo.png', width: 83, height: 83
+        .middle
+          %h1.header
+            = link_to 'Cole Valley Code', root_path
+          %p.tagline
+            This memo board is open source and has an open mind.
     = yield
     = link_to 'Log in', '/auth/google_oauth2'
     - if session[:admin]

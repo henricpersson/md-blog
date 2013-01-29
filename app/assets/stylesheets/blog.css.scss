@@ -1,7 +1,7 @@
 @import 'compass/css3';
 
 @mixin colorize($color) {
-  @include background-image(linear-gradient(lighten($color, 5%), $color));
+  @include background-image(linear-gradient(lighten($color, 3%), $color));
   border-bottom: 1px solid darken($color, 5%);
 
   &:before {
@@ -43,7 +43,7 @@ ul.blog-entries {
   li.blog-entry-in-list {
     width: 100%;
 
-    @include colorize(#6ad1e3);
+    @include colorize(lighten(#6ad1e3, 20%));
     &:nth-child(2n+2) {
       @include colorize(lighten(#6ad1e3, 10%));
     }

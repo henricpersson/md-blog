@@ -8,13 +8,12 @@
     = csrf_meta_tags
   %body
     .top
-      .inner.clearfix
-        .left
-          = link_to '', root_path, class: 'logo'
-        .middle
-          %h1.header
-            = link_to 'Cole Valley Code', root_path
-          %p.tagline
+      .inner
+        %h1.header
+          = link_to 'Cole Valley Code', root_path
+        .tagline
+          .line
+          %p
             This memo board is
             = link_to 'open source', 'https://github.com/henricpersson/md-blog'
             and has an open mind.

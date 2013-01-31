@@ -12,6 +12,8 @@ gem 'haml-rails'
 
 gem 'redcarpet'
 
+gem 'stringex'
+
 gem "omniauth-google-oauth2"
 
 # Gems used only for assets and not required

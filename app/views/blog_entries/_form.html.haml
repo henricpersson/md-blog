@@ -16,10 +16,6 @@
       .controls
         = f.text_area :body, cols: 20, class: 'large'
     .control-group
-      = f.label :url_slug, class: 'control-label'
-      .controls
-        = f.text_field :url_slug
-    .control-group
       = f.label :published_at, class: 'control-label'
       .controls.date
         = f.datetime_select :published_at

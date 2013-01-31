@@ -67,7 +67,7 @@ ul.blog-entries {
     .title {
       white-space: nowrap;
       text-overflow: ellipsis;
-      overflow-y: hidden;
+      overflow-x: hidden;
       opacity: 0.8;
 
       @media only screen and (max-width: 600px) {

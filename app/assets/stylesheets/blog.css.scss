@@ -25,10 +25,11 @@
 }
 
 
-body {
+html body {
   padding-left: 0 !important;
   padding-right: 0 !important;
   color: #333;
+  background-color: lighten(#6ad1e3, 20%);
 }
 
 .visible-desktop li.blog-entry {

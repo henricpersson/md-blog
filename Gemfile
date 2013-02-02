@@ -10,6 +10,7 @@ gem 'pg'
 gem 'haml-rails'
 
 gem 'redcarpet'
+gem 'pygmentize'
 
 gem 'stringex'
 
@@ -22,7 +23,6 @@ gem 'coffee-rails', '~> 3.2.1'
 gem 'compass-rails'
 gem 'twitter-bootstrap-rails'
 
-gem 'albino'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', :platforms => :ruby

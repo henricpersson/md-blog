@@ -2,7 +2,7 @@ module BlogHelper
 
   def markdown_to_html(markdown)
     converter = Redcarpet::Markdown.new(
-      HTMLWithAlbino,
+      PygmentizeHTML,
       autolink: true,
       space_after_headers: true,
       fenced_code_blocks: true,
@@ -10,5 +10,11 @@ module BlogHelper
     )
 
     converter.render(markdown)
+  end
+end
+class PygmentizeHTML < Redcarpet::Render::HTML
+  def block_code(code, language)
+    require 'pygmentize'
+    Pygmentize.process(code, language)
   end
 end

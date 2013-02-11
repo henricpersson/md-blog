@@ -20,7 +20,7 @@
         %p
           = truncate(strip_tags(blog_entry.rendered_body), length: 400, separator: ' ').html_safe
         = link_to blog_path(blog_entry), class: 'see-more ajax btn btn-info' do
-          Read full post
+          Read full post &raquo;
     - else
       .body= blog_entry.rendered_body.html_safe
       = render 'disqus_thread', thread_id: "entry-#{blog_entry.id}"

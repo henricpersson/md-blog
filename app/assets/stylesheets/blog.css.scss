@@ -29,7 +29,10 @@ html body {
   padding-left: 0 !important;
   padding-right: 0 !important;
   color: #333;
-  background-color: lighten(#6ad1e3, 20%);
+
+  .middle {
+    background-color: lighten(#6ad1e3, 20%);
+  }
 
   h1, h2, h3, h4, h5, h6 {
     color: #666;

@@ -18,7 +18,7 @@
     - if truncated
       .body.excerpt
         %p
-          = truncate(strip_tags(blog_entry.rendered_body), length: 400, separator: ' ').html_safe
+          = blog_entry.excerpt_body.html_safe
         = link_to blog_path(blog_entry), class: 'see-more ajax btn btn-info' do
           Read full post &raquo;
     - else

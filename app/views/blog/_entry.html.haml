@@ -18,9 +18,9 @@
     - if truncated
       .body.excerpt
         %p
-          = raw truncate(strip_tags(markdown_to_html(blog_entry.body)), length: 400, separator: ' ')
+          = truncate(strip_tags(blog_entry.rendered_body), length: 400, separator: ' ').html_safe
         = link_to blog_path(blog_entry), class: 'see-more ajax btn btn-info' do
           Read full post
     - else
-      .body= markdown_to_html(blog_entry.body).html_safe
+      .body= blog_entry.rendered_body.html_safe
       = render 'disqus_thread', thread_id: "entry-#{blog_entry.id}"

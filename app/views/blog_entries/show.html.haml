@@ -5,8 +5,8 @@
     %b Title:
     = @blog_entry.title
   %p
-    %b Body:
-    = @blog_entry.body
+    %b Rendered body:
+    = @blog_entry.rendered_body.html_safe
   %p
     %b Url slug:
     = @blog_entry.url_slug

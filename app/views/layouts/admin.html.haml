@@ -1,0 +1,19 @@
+!!! html5
+%html
+  %head
+    %title Admin | Cole Valley Code
+    = stylesheet_link_tag 'application', media: 'all'
+    = stylesheet_link_tag 'admin', media: 'all'
+    %link{ rel: 'shortcut icon', href: asset_path('blobs.png') }
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+    .top
+      .inner
+        %h1.header
+          = link_to 'Cole Valley Code', root_path
+    .middle
+      = yield
+    .footer
+      - if session[:admin]
+        = link_to 'Log out', '/session/logout'

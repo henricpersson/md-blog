@@ -9,7 +9,6 @@
     %meta{ property: 'og:url', content: @og[:url] }
     %meta{ property: 'og:description', content: @og[:description] }
     %link{ rel: 'shortcut icon', href: asset_path('blobs.png') }
-    = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
     .top

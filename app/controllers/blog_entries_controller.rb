@@ -1,5 +1,5 @@
 class BlogEntriesController < ApplicationController
-
+  layout 'admin'
   before_filter :require_admin
 
   # GET /blog_entries
@@ -8,7 +8,7 @@ class BlogEntriesController < ApplicationController
     @blog_entries = BlogEntry.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.json { render json: @blog_entries }
     end
   end
